@@ -6,7 +6,7 @@ services:
       APP_PORT: 46884
 
   p2poolv2:
-    image: ogunseye/p2poolv2:0.15.2
+    image: ghcr.io/p2poolv2/p2poolv2:v0.15.3
     restart: on-failure
     stop_grace_period: 1m
     ports:
