@@ -5,7 +5,7 @@ tagline: Peer-to-peer Bitcoin mining pool, no operator required
 icon: https://raw.githubusercontent.com/p2poolv2/umbrel-app/main/p2poolv2/icon.png
 category: bitcoin
 version: "0.15.2"
-port: 46885
+port: 36884
 description: >-
   P2Poolv2 lets miners coordinate directly and verify their own rewards,
   without a centralized pool operator. It uses a share chain with uncles
