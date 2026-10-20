@@ -25,7 +25,7 @@ services:
     image: prom/prometheus:latest
     restart: on-failure
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ${APP_DATA_DIR}/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - ${APP_DATA_DIR}/prometheus-data:/prometheus
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
@@ -40,8 +40,8 @@ services:
       - "3001:3000"
     volumes:
       - ${APP_DATA_DIR}/grafana-data:/var/lib/grafana
-      - ./grafana/provisioning:/etc/grafana/provisioning:ro
-      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - ${APP_DATA_DIR}/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ${APP_DATA_DIR}/grafana/dashboards:/var/lib/grafana/dashboards:ro
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=$APP_PASSWORD
       - GF_SECURITY_ADMIN_USER=admin
